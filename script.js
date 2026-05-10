@@ -1,8 +1,20 @@
-const container = document.createElement("div");
+const API_URL = "https://script.google.com/macros/s/AKfycbynyMfq93R4P5YHOABBxNGI2pO7GiXr40g5qoRHEqjcbswBpKm42qB7-4OuLJ0_e56Kvg/exec";
 
-container.innerHTML = `
-  <h2>Craft World Data Loading...</h2>
-  <p id="status">Ready</p>
-`;
+fetch(API_URL)
+  .then(res => res.json())
+  .then(data => {
+    console.log("Sheet data:", data);
 
-document.body.appendChild(container);
+    document.body.innerHTML += "<h2>Resources Loaded </h2>";
+
+    data.forEach(item => {
+      document.body.innerHTML += 
+        <div>
+          <strong>${item.Resource}</strong> - Profit: ${item.Profit}
+        </div>
+      ;
+    });
+  })
+  .catch(err => {
+    console.error("Error loading sheet:", err);
+  });
