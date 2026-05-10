@@ -1,4 +1,4 @@
-const API_URL = "https://script.google.com/macros/s/AKfycbwyFFnL6ePE8wvzH3D-2hBcPdpHJl7TZGt0a-iioR3miAAJAmVX2wZvpVc0oAN7c8iYRA/exec";
+const API_URL = "https://script.google.com/macros/s/AKfycbz7THMGFg0qZSjvfeKpBu6CIBw2xiOcck6vuBiBEcaUvRggb4jGwj_ibNyqo5Fiv94rLQ/exec";
 
 fetch(API_URL)
   .then(res => res.json())
