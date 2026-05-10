@@ -1,1 +1,1 @@
-document.body.innerHTML += "<h2>Site loaded successfully 🚀</h2>";
+document.body.innerHTML += "<h2 style='color:green'>Script is working 🚀</h2>";
